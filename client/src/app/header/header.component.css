@@ -1,0 +1,31 @@
+.navbar{
+    width: 100%;
+    padding:20px;
+    color:white;
+    background-color: black;
+}
+
+.navbar img{
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.navbar-brand h3{
+    color: white;
+    font-weight:bold;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.cart{
+    margin-left: auto;
+    color:black;
+    margin-right: 30px;
+}
+
+.cart a{
+    color: white;
+}
+
+.cart a:hover{
+    opacity: 50%;
+}

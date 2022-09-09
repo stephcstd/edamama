@@ -1,0 +1,20 @@
+
+.navbar{
+    display: flex;
+    flex: 1;
+    width: 100%;
+    padding:20px;
+    color:white;
+ 
+}
+
+.cart{
+margin-left: auto;
+color:black;
+margin-right: 30px;
+}
+
+.list-container{
+    margin-inline: 10%;
+    margin-block: 20px
+}

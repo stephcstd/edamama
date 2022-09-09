@@ -1,0 +1,28 @@
+<div>
+  <div>
+    <h4><strong>SHOPPING CART</strong></h4>
+  </div>
+
+  <div class="table-responsive">
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">Image</th>
+          <th scope="col">Product</th>
+          <th scope="col">Quantity</th>
+          <th scope="col">Price</th>
+          <th scope="col">Total</th>
+        </tr>
+      </thead>
+      <tbody *ngFor="let product of cart">
+        <tr>
+          <td><img class="product-img" src="assets/{{product.image}}" width="75px"></td>
+          <td><div class="name"> {{product.name}}</div></td>
+          <td><div class="qty"> x {{product.quantity}} </div></td>
+          <td><div class="price">$ {{product.price}}.00 </div></td>
+          <td><div class="total">$ {{product.total}}.00 </div></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

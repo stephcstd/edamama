@@ -1,0 +1,69 @@
+<div *ngFor="let product of products" class="list-container">
+    <div *ngIf="product._id == productId">
+      <div class="box d-flex justify-content-center">
+        <div>
+            <img class="product-img rounded" src="assets/{{product.image}}" width="320px"  >
+        </div>
+      
+        <div class="col-lg-6">
+            
+          <div>
+            <h2>{{product.name}} </h2>
+          </div>
+          <div class="brandCategory">
+            <p>{{product.brand}} | {{product.category}}</p>
+          </div>
+          <div>
+            <h3> $ {{product.price}}.00 </h3>
+          </div>
+          <div>
+            <p>{{product.description}}</p>
+          </div>
+          
+          <!-- <div>
+            <p>{{product.countInStock}}</p>
+          </div> -->
+          
+          <div class="d-flex">
+            <div class="rating">
+              <span *ngIf="product.rating >= 0.5 && product.rating < 1"><i class="fa fa-star-half-o"></i><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i></span>
+              <span *ngIf="product.rating >= 1 && product.rating < 1.5"><i class="fa fa-star"></i><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i></span>
+              <span *ngIf="product.rating >= 1.5 && product.rating < 2"><i class="fa fa-star"></i><i class="fa fa-star-half-o"></i><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i></span>
+              <span *ngIf="product.rating >= 2 && product.rating < 2.5"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i></span>
+              <span *ngIf="product.rating >= 2.5 && product.rating < 3"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-half-o"></i><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i></span>
+              <span *ngIf="product.rating >= 3 && product.rating < 3.5"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i></span>
+              <span *ngIf="product.rating >= 3.5 && product.rating < 4"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-half-o"></i><i class="fa fa-star-o"></i></span>
+              <span *ngIf="product.rating >= 4 && product.rating < 4.5"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-o"></i></span>
+              <span *ngIf="product.rating >= 4.5 && product.rating < 5"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-half-o"></i></span>
+              <span *ngIf="product.rating >= 5"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></span>
+            </div>
+                  
+            <div class="review">
+              <p>| {{product.numReview}} reviews</p>
+            </div> 
+          </div>
+                  
+          <div class="d-flex-row justify-content-center">
+            <div>
+              <div class="input-group">
+                <div class="input-group-prepend">
+                  <button class="input-group-text qty" (click)="minusQty()">-</button>
+                </div>
+                <span id="qty">{{qty}}</span> 
+                    
+                <div class="input-group-append">
+                  <button class="input-group-text" (click)="addQty()" >+</button>
+                </div>
+              </div>
+            </div>
+
+            <div>     
+              <a href="/cart/{{product._id}}/{{qty}}" class="btn btn-primary add-to-cart">Add to Cart</a>
+            </div> 
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+</div>
