@@ -1,5 +1,3 @@
-CUSTODIO - Edamama Assessment
-
 NOTE: paste the '.env' file in the root folder.
 
 1. Install node_modules for backend by typing "npm install" in the terminal of the root folder.
